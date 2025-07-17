@@ -1,0 +1,122 @@
+[
+  {
+    "Id": 1,
+    "studentId": 1,
+    "classId": "1",
+    "date": "2024-01-15",
+    "status": "present",
+    "notes": ""
+  },
+  {
+    "Id": 2,
+    "studentId": 2,
+    "classId": "1",
+    "date": "2024-01-15",
+    "status": "present",
+    "notes": ""
+  },
+  {
+    "Id": 3,
+    "studentId": 4,
+    "classId": "1",
+    "date": "2024-01-15",
+    "status": "tardy",
+    "notes": "Arrived 10 minutes late"
+  },
+  {
+    "Id": 4,
+    "studentId": 7,
+    "classId": "1",
+    "date": "2024-01-15",
+    "status": "present",
+    "notes": ""
+  },
+  {
+    "Id": 5,
+    "studentId": 8,
+    "classId": "1",
+    "date": "2024-01-15",
+    "status": "absent",
+    "notes": "Sick day"
+  },
+  {
+    "Id": 6,
+    "studentId": 1,
+    "classId": "1",
+    "date": "2024-01-16",
+    "status": "present",
+    "notes": ""
+  },
+  {
+    "Id": 7,
+    "studentId": 2,
+    "classId": "1",
+    "date": "2024-01-16",
+    "status": "present",
+    "notes": ""
+  },
+  {
+    "Id": 8,
+    "studentId": 4,
+    "classId": "1",
+    "date": "2024-01-16",
+    "status": "present",
+    "notes": ""
+  },
+  {
+    "Id": 9,
+    "studentId": 7,
+    "classId": "1",
+    "date": "2024-01-16",
+    "status": "present",
+    "notes": ""
+  },
+  {
+    "Id": 10,
+    "studentId": 8,
+    "classId": "1",
+    "date": "2024-01-16",
+    "status": "present",
+    "notes": ""
+  },
+  {
+    "Id": 11,
+    "studentId": 3,
+    "classId": "2",
+    "date": "2024-01-15",
+    "status": "present",
+    "notes": ""
+  },
+  {
+    "Id": 12,
+    "studentId": 5,
+    "classId": "2",
+    "date": "2024-01-15",
+    "status": "present",
+    "notes": ""
+  },
+  {
+    "Id": 13,
+    "studentId": 6,
+    "classId": "2",
+    "date": "2024-01-15",
+    "status": "present",
+    "notes": ""
+  },
+  {
+    "Id": 14,
+    "studentId": 9,
+    "classId": "2",
+    "date": "2024-01-15",
+    "status": "absent",
+    "notes": "Family emergency"
+  },
+  {
+    "Id": 15,
+    "studentId": 10,
+    "classId": "2",
+    "date": "2024-01-15",
+    "status": "present",
+    "notes": ""
+  }
+]

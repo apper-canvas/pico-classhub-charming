@@ -1,0 +1,92 @@
+[
+  {
+    "Id": 1,
+    "classId": "1",
+    "name": "Quadratic Equations Test",
+    "category": "Test",
+    "points": 100,
+    "dueDate": "2024-01-15",
+    "weight": 0.3
+  },
+  {
+    "Id": 2,
+    "classId": "1",
+    "name": "Homework Set 1",
+    "category": "Homework",
+    "points": 50,
+    "dueDate": "2024-01-10",
+    "weight": 0.2
+  },
+  {
+    "Id": 3,
+    "classId": "1",
+    "name": "Midterm Exam",
+    "category": "Exam",
+    "points": 200,
+    "dueDate": "2024-01-20",
+    "weight": 0.5
+  },
+  {
+    "Id": 4,
+    "classId": "2",
+    "name": "Ancient Civilizations Essay",
+    "category": "Essay",
+    "points": 100,
+    "dueDate": "2024-01-18",
+    "weight": 0.4
+  },
+  {
+    "Id": 5,
+    "classId": "2",
+    "name": "Chapter 3 Quiz",
+    "category": "Quiz",
+    "points": 50,
+    "dueDate": "2024-01-12",
+    "weight": 0.2
+  },
+  {
+    "Id": 6,
+    "classId": "3",
+    "name": "Cell Structure Lab",
+    "category": "Lab",
+    "points": 75,
+    "dueDate": "2024-01-16",
+    "weight": 0.3
+  },
+  {
+    "Id": 7,
+    "classId": "3",
+    "name": "Photosynthesis Project",
+    "category": "Project",
+    "points": 150,
+    "dueDate": "2024-01-25",
+    "weight": 0.4
+  },
+  {
+    "Id": 8,
+    "classId": "4",
+    "name": "Shakespeare Analysis",
+    "category": "Essay",
+    "points": 100,
+    "dueDate": "2024-01-22",
+    "weight": 0.35
+  },
+  {
+    "Id": 9,
+    "classId": "4",
+    "name": "Vocabulary Quiz",
+    "category": "Quiz",
+    "points": 25,
+    "dueDate": "2024-01-14",
+    "weight": 0.15
+  },
+  {
+    "Id": 10,
+    "classId": "5",
+    "name": "Oral Presentation",
+    "category": "Presentation",
+    "points": 100,
+    "dueDate": "2024-01-19",
+    "weight": 0.4
+  }
+]

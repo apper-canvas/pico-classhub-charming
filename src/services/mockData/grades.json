@@ -1,0 +1,82 @@
+[
+  {
+    "Id": 1,
+    "studentId": 1,
+    "assignmentId": 1,
+    "score": 92,
+    "submittedDate": "2024-01-15",
+    "notes": "Excellent work on quadratic equations"
+  },
+  {
+    "Id": 2,
+    "studentId": 1,
+    "assignmentId": 2,
+    "score": 48,
+    "submittedDate": "2024-01-10",
+    "notes": "Good completion of homework"
+  },
+  {
+    "Id": 3,
+    "studentId": 2,
+    "assignmentId": 1,
+    "score": 85,
+    "submittedDate": "2024-01-15",
+    "notes": "Solid understanding demonstrated"
+  },
+  {
+    "Id": 4,
+    "studentId": 2,
+    "assignmentId": 2,
+    "score": 45,
+    "submittedDate": "2024-01-10",
+    "notes": "Most problems completed correctly"
+  },
+  {
+    "Id": 5,
+    "studentId": 4,
+    "assignmentId": 1,
+    "score": 78,
+    "submittedDate": "2024-01-15",
+    "notes": "Room for improvement on complex problems"
+  },
+  {
+    "Id": 6,
+    "studentId": 4,
+    "assignmentId": 2,
+    "score": 42,
+    "submittedDate": "2024-01-10",
+    "notes": "Good effort on homework assignments"
+  },
+  {
+    "Id": 7,
+    "studentId": 7,
+    "assignmentId": 1,
+    "score": 95,
+    "submittedDate": "2024-01-15",
+    "notes": "Outstanding performance"
+  },
+  {
+    "Id": 8,
+    "studentId": 7,
+    "assignmentId": 2,
+    "score": 50,
+    "submittedDate": "2024-01-10",
+    "notes": "Perfect homework submission"
+  },
+  {
+    "Id": 9,
+    "studentId": 8,
+    "assignmentId": 1,
+    "score": 82,
+    "submittedDate": "2024-01-15",
+    "notes": "Good grasp of the material"
+  },
+  {
+    "Id": 10,
+    "studentId": 8,
+    "assignmentId": 2,
+    "score": 46,
+    "submittedDate": "2024-01-10",
+    "notes": "Consistent work quality"
+  }
+]
