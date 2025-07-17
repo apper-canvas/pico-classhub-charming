@@ -34,11 +34,11 @@ const validateForm = () => {
       newErrors.parentEmail = "Parent email is required";
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.parentEmail)) {
       newErrors.parentEmail = "Please enter a valid parent email address";
-    }
+}
     
     if (!formData.parentPhone.trim()) {
       newErrors.parentPhone = "Parent phone number is required";
-    } else if (!/^\+?[\d\s\-\(\)]+$/.test(formData.parentPhone)) {
+    } else if (!/^\+?[\d\s\-()]+$/.test(formData.parentPhone)) {
       newErrors.parentPhone = "Please enter a valid phone number";
     }
     
