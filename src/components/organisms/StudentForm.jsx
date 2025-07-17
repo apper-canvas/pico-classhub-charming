@@ -4,33 +4,42 @@ import FormField from "@/components/molecules/FormField";
 import { format } from "date-fns";
 
 const StudentForm = ({ student, onSubmit, onCancel }) => {
-  const [formData, setFormData] = useState({
-    firstName: student?.firstName || "",
-    lastName: student?.lastName || "",
+const [formData, setFormData] = useState({
+    fullName: student ? `${student.firstName} ${student.lastName}` : "",
     email: student?.email || "",
     grade: student?.grade || "",
     dateOfBirth: student?.dateOfBirth ? format(new Date(student.dateOfBirth), "yyyy-MM-dd") : "",
     enrollmentDate: student?.enrollmentDate ? format(new Date(student.enrollmentDate), "yyyy-MM-dd") : format(new Date(), "yyyy-MM-dd"),
+    parentEmail: student?.parentEmail || "",
+    parentPhone: student?.parentPhone || "",
     status: student?.status || "active",
   });
 
   const [errors, setErrors] = useState({});
 
-  const validateForm = () => {
+const validateForm = () => {
     const newErrors = {};
     
-    if (!formData.firstName.trim()) {
-      newErrors.firstName = "First name is required";
-    }
-    
-    if (!formData.lastName.trim()) {
-      newErrors.lastName = "Last name is required";
+    if (!formData.fullName.trim()) {
+      newErrors.fullName = "Full name is required";
     }
     
     if (!formData.email.trim()) {
       newErrors.email = "Email is required";
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
       newErrors.email = "Please enter a valid email address";
+    }
+    
+    if (!formData.parentEmail.trim()) {
+      newErrors.parentEmail = "Parent email is required";
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.parentEmail)) {
+      newErrors.parentEmail = "Please enter a valid parent email address";
+    }
+    
+    if (!formData.parentPhone.trim()) {
+      newErrors.parentPhone = "Parent phone number is required";
+    } else if (!/^\+?[\d\s\-\(\)]+$/.test(formData.parentPhone)) {
+      newErrors.parentPhone = "Please enter a valid phone number";
     }
     
     if (!formData.grade.trim()) {
@@ -42,17 +51,27 @@ const StudentForm = ({ student, onSubmit, onCancel }) => {
     }
     
     if (!formData.enrollmentDate) {
-      newErrors.enrollmentDate = "Enrollment date is required";
+      newErrors.enrollmentDate = "Joining date is required";
     }
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e) => {
+const handleSubmit = (e) => {
     e.preventDefault();
     if (validateForm()) {
-      onSubmit(formData);
+      // Split fullName into firstName and lastName for backend compatibility
+      const [firstName, ...lastNameParts] = formData.fullName.trim().split(' ');
+      const lastName = lastNameParts.join(' ') || '';
+      
+      const submitData = {
+        ...formData,
+        firstName,
+        lastName
+      };
+      
+      onSubmit(submitData);
     }
   };
 
@@ -94,33 +113,42 @@ const StudentForm = ({ student, onSubmit, onCancel }) => {
   ];
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
+<form onSubmit={handleSubmit} className="space-y-6">
+      <FormField
+        label="Full Name"
+        value={formData.fullName}
+        onChange={(e) => handleChange("fullName", e.target.value)}
+        error={errors.fullName}
+        placeholder="Enter full name"
+      />
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <FormField
-          label="First Name"
-          value={formData.firstName}
-          onChange={(e) => handleChange("firstName", e.target.value)}
-          error={errors.firstName}
-          placeholder="Enter first name"
+          label="Email"
+          type="email"
+          value={formData.email}
+          onChange={(e) => handleChange("email", e.target.value)}
+          error={errors.email}
+          placeholder="Enter student email address"
         />
         <FormField
-          label="Last Name"
-          value={formData.lastName}
-          onChange={(e) => handleChange("lastName", e.target.value)}
-          error={errors.lastName}
-          placeholder="Enter last name"
+          label="Parent Email"
+          type="email"
+          value={formData.parentEmail}
+          onChange={(e) => handleChange("parentEmail", e.target.value)}
+          error={errors.parentEmail}
+          placeholder="Enter parent email address"
         />
       </div>
 
       <FormField
-        label="Email"
-        type="email"
-        value={formData.email}
-        onChange={(e) => handleChange("email", e.target.value)}
-        error={errors.email}
-        placeholder="Enter email address"
+        label="Parent Phone Number"
+        type="tel"
+        value={formData.parentPhone}
+        onChange={(e) => handleChange("parentPhone", e.target.value)}
+        error={errors.parentPhone}
+        placeholder="Enter parent phone number"
       />
-
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <FormField
           type="select"
@@ -148,8 +176,8 @@ const StudentForm = ({ student, onSubmit, onCancel }) => {
           onChange={(e) => handleChange("dateOfBirth", e.target.value)}
           error={errors.dateOfBirth}
         />
-        <FormField
-          label="Enrollment Date"
+<FormField
+          label="Joining Date"
           type="date"
           value={formData.enrollmentDate}
           onChange={(e) => handleChange("enrollmentDate", e.target.value)}
