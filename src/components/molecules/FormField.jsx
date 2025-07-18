@@ -2,7 +2,7 @@ import Input from "@/components/atoms/Input";
 import Select from "@/components/atoms/Select";
 import TextArea from "@/components/atoms/TextArea";
 
-const FormField = ({ type = "input", label, error, options, ...props }) => {
+const FormField = ({ type = "input", label, error, options, helperText, ...props }) => {
   switch (type) {
     case "select":
       return (
