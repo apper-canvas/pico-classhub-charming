@@ -6,6 +6,7 @@ import { format } from "date-fns";
 const EmployeeForm = ({ employee, onSubmit, onCancel }) => {
   const [formData, setFormData] = useState({
     name: employee?.name || "",
+    fullName: employee?.fullName || "",
     email: employee?.email || "",
     department: employee?.department || "",
     position: employee?.position || "",
@@ -18,11 +19,15 @@ const EmployeeForm = ({ employee, onSubmit, onCancel }) => {
 
   const [errors, setErrors] = useState({});
 
-  const validateForm = () => {
+const validateForm = () => {
     const newErrors = {};
     
     if (!formData.name.trim()) {
       newErrors.name = "Name is required";
+    }
+    
+    if (!formData.fullName.trim()) {
+      newErrors.fullName = "Full Name is required";
     }
     
     if (!formData.email.trim()) {
@@ -129,16 +134,23 @@ const EmployeeForm = ({ employee, onSubmit, onCancel }) => {
     { value: "on_leave", label: "On Leave" }
   ];
 
-  return (
+return (
     <form onSubmit={handleSubmit} className="space-y-6">
       <FormField
-        label="Full Name"
+        label="Name"
         value={formData.name}
         onChange={(e) => handleChange("name", e.target.value)}
         error={errors.name}
-        placeholder="Enter full name"
+        placeholder="Enter name"
       />
 
+      <FormField
+        label="Full Name"
+        value={formData.fullName}
+        onChange={(e) => handleChange("fullName", e.target.value)}
+        error={errors.fullName}
+        placeholder="Enter full name"
+      />
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <FormField
           label="Email"

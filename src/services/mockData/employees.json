@@ -1,7 +1,8 @@
 [
-  {
+{
     "Id": 1,
     "name": "Dr. Sarah Johnson",
+    "fullName": "Dr. Sarah Elizabeth Johnson",
     "email": "sarah.johnson@classhub.edu",
     "department": "Mathematics",
     "position": "Department Head",
@@ -11,9 +12,10 @@
     "employeeId": "EMP001",
     "subjects": ["Algebra II", "Calculus", "Statistics"]
   },
-  {
+{
     "Id": 2,
     "name": "Mr. Michael Chen",
+    "fullName": "Mr. Michael Andrew Chen",
     "email": "michael.chen@classhub.edu",
     "department": "Science",
     "position": "Chemistry Teacher",
@@ -23,9 +25,10 @@
     "employeeId": "EMP002",
     "subjects": ["Chemistry", "AP Chemistry", "Environmental Science"]
   },
-  {
+{
     "Id": 3,
     "name": "Ms. Emily Rodriguez",
+    "fullName": "Ms. Emily Maria Rodriguez",
     "email": "emily.rodriguez@classhub.edu",
     "department": "English",
     "position": "English Teacher",
@@ -35,9 +38,10 @@
     "employeeId": "EMP003",
     "subjects": ["English Literature", "Creative Writing", "AP English"]
   },
-  {
+{
     "Id": 4,
     "name": "Dr. James Wilson",
+    "fullName": "Dr. James Robert Wilson",
     "email": "james.wilson@classhub.edu",
     "department": "Administration",
     "position": "Principal",
@@ -47,9 +51,10 @@
     "employeeId": "EMP004",
     "subjects": []
   },
-  {
+{
     "Id": 5,
     "name": "Mrs. Lisa Thompson",
+    "fullName": "Mrs. Lisa Marie Thompson",
     "email": "lisa.thompson@classhub.edu",
     "department": "Special Education",
     "position": "Special Education Teacher",
@@ -59,9 +64,10 @@
     "employeeId": "EMP005",
     "subjects": ["Special Education", "Learning Support"]
   },
-  {
+{
     "Id": 6,
     "name": "Mr. David Park",
+    "fullName": "Mr. David Jin Park",
     "email": "david.park@classhub.edu",
     "department": "Physical Education",
     "position": "PE Teacher",
@@ -71,9 +77,10 @@
     "employeeId": "EMP006",
     "subjects": ["Physical Education", "Health", "Sports Medicine"]
   },
-  {
+{
     "Id": 7,
     "name": "Ms. Amanda Foster",
+    "fullName": "Ms. Amanda Grace Foster",
     "email": "amanda.foster@classhub.edu",
     "department": "Arts",
     "position": "Art Teacher",
@@ -83,9 +90,10 @@
     "employeeId": "EMP007",
     "subjects": ["Visual Arts", "Digital Art", "Art History"]
   },
-  {
+{
     "Id": 8,
     "name": "Mr. Robert Garcia",
+    "fullName": "Mr. Robert Antonio Garcia",
     "email": "robert.garcia@classhub.edu",
     "department": "History",
     "position": "History Teacher",
@@ -95,9 +103,10 @@
     "employeeId": "EMP008",
     "subjects": ["World History", "US History", "Government"]
   },
-  {
+{
     "Id": 9,
     "name": "Mrs. Jennifer Lee",
+    "fullName": "Mrs. Jennifer Soo Lee",
     "email": "jennifer.lee@classhub.edu",
     "department": "Support Services",
     "position": "School Counselor",
@@ -107,9 +116,10 @@
     "employeeId": "EMP009",
     "subjects": []
   },
-  {
+{
     "Id": 10,
     "name": "Mr. Thomas Brown",
+    "fullName": "Mr. Thomas Christopher Brown",
     "email": "thomas.brown@classhub.edu",
     "department": "Technology",
     "position": "IT Coordinator",
@@ -119,9 +129,10 @@
     "employeeId": "EMP010",
     "subjects": ["Computer Science", "Web Development"]
   },
-  {
+{
     "Id": 11,
     "name": "Ms. Rachel Davis",
+    "fullName": "Ms. Rachel Anne Davis",
     "email": "rachel.davis@classhub.edu",
     "department": "Music",
     "position": "Music Teacher",
@@ -131,9 +142,10 @@
     "employeeId": "EMP011",
     "subjects": ["Band", "Choir", "Music Theory"]
   },
-  {
+{
     "Id": 12,
     "name": "Mr. Kevin Miller",
+    "fullName": "Mr. Kevin Douglas Miller",
     "email": "kevin.miller@classhub.edu",
     "department": "Foreign Language",
     "position": "Spanish Teacher",
@@ -143,9 +155,10 @@
     "employeeId": "EMP012",
     "subjects": ["Spanish I", "Spanish II", "AP Spanish"]
   },
-  {
+{
     "Id": 13,
     "name": "Mrs. Nicole Anderson",
+    "fullName": "Mrs. Nicole Patricia Anderson",
     "email": "nicole.anderson@classhub.edu",
     "department": "Administration",
     "position": "Vice Principal",
@@ -155,9 +168,10 @@
     "employeeId": "EMP013",
     "subjects": []
   },
-  {
+{
     "Id": 14,
     "name": "Mr. Christopher Taylor",
+    "fullName": "Mr. Christopher Michael Taylor",
     "email": "christopher.taylor@classhub.edu",
     "department": "Support Services",
     "position": "Librarian",
@@ -167,9 +181,10 @@
     "employeeId": "EMP014",
     "subjects": ["Library Science", "Research Methods"]
   },
-  {
+{
     "Id": 15,
     "name": "Ms. Stephanie White",
+    "fullName": "Ms. Stephanie Louise White",
     "email": "stephanie.white@classhub.edu",
     "department": "Health Services",
     "position": "School Nurse",

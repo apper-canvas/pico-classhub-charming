@@ -20,11 +20,12 @@ export const employeeService = {
     return { ...employee };
   },
 
-  async create(employeeData) {
+async create(employeeData) {
     await delay(300);
     const newEmployee = {
       Id: nextId++,
       name: employeeData.name,
+      fullName: employeeData.fullName,
       email: employeeData.email,
       department: employeeData.department,
       position: employeeData.position,
@@ -45,9 +46,10 @@ export const employeeService = {
       throw new Error(`Employee with ID ${id} not found`);
     }
     
-    const updatedEmployee = {
+const updatedEmployee = {
       ...employees[index],
       name: employeeData.name,
+      fullName: employeeData.fullName,
       email: employeeData.email,
       department: employeeData.department,
       position: employeeData.position,
