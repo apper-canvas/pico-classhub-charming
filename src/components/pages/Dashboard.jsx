@@ -11,6 +11,7 @@ import ApperIcon from "@/components/ApperIcon";
 import { studentService } from "@/services/api/studentService";
 import { classService } from "@/services/api/classService";
 import { gradeService } from "@/services/api/gradeService";
+import { employeeService } from "@/services/api/employeeService";
 import { attendanceService } from "@/services/api/attendanceService";
 import { assignmentService } from "@/services/api/assignmentService";
 import { format, subDays, isToday } from "date-fns";
@@ -20,7 +21,8 @@ const Dashboard = () => {
   const [classes, setClasses] = useState([]);
   const [grades, setGrades] = useState([]);
   const [attendance, setAttendance] = useState([]);
-  const [assignments, setAssignments] = useState([]);
+const [assignments, setAssignments] = useState([]);
+  const [employees, setEmployees] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const navigate = useNavigate();
@@ -34,18 +36,20 @@ const Dashboard = () => {
       setLoading(true);
       setError("");
       
-      const [studentsData, classesData, gradesData, attendanceData, assignmentsData] = await Promise.all([
+const [studentsData, classesData, gradesData, attendanceData, assignmentsData, employeesData] = await Promise.all([
         studentService.getAll(),
         classService.getAll(),
         gradeService.getAll(),
         attendanceService.getAll(),
-        assignmentService.getAll()
+assignmentService.getAll(),
+        employeeService.getAll()
       ]);
 
       setStudents(studentsData);
       setClasses(classesData);
       setGrades(gradesData);
-      setAttendance(attendanceData);
+setAssignments(assignmentsData);
+      setEmployees(employeesData);
       setAssignments(assignmentsData);
     } catch (err) {
       setError(err.message);
@@ -54,7 +58,8 @@ const Dashboard = () => {
     }
   };
 
-  const calculateStats = () => {
+const calculateStats = () => {
+    const totalEmployees = employees.length;
     const totalStudents = students.length;
     const totalClasses = classes.length;
     
@@ -76,7 +81,8 @@ const Dashboard = () => {
       totalStudents,
       totalClasses,
       attendanceRate,
-      averageGrade
+averageGrade,
+      totalEmployees
     };
   };
 
@@ -149,8 +155,15 @@ const Dashboard = () => {
             variant="secondary"
             onClick={() => navigate("/students")}
           >
-            <ApperIcon name="Users" className="h-4 w-4" />
+<ApperIcon name="Users" className="h-4 w-4" />
             Manage Students
+          </Button>
+          <Button
+            variant="secondary"
+            onClick={() => navigate("/employees")}
+          >
+            <ApperIcon name="UserCheck" className="h-4 w-4" />
+            Manage Employees
           </Button>
           <Button
             variant="primary"
@@ -191,6 +204,12 @@ const Dashboard = () => {
           color="primary"
           trend={stats.averageGrade > 80 ? "up" : "down"}
           trendValue={`${stats.averageGrade > 80 ? "Above Target" : "Below Target"}`}
+/>
+        <StatCard
+          title="Total Employees"
+          value={stats.totalEmployees}
+          icon="UserCheck"
+          color="warning"
         />
       </div>
 

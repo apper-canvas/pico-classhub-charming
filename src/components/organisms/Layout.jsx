@@ -9,11 +9,13 @@ const Layout = ({ children }) => {
 
   const getPageTitle = () => {
     const path = location.pathname;
-    switch (path) {
+switch (path) {
       case "/":
         return "Dashboard";
       case "/students":
         return "Students";
+      case "/employees":
+        return "Employees";
       case "/classes":
         return "Classes";
       case "/grades":

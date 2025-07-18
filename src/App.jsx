@@ -6,6 +6,7 @@ import { ToastContainer } from 'react-toastify';
 import Layout from '@/components/organisms/Layout';
 import Dashboard from '@/components/pages/Dashboard';
 import Students from '@/components/pages/Students';
+import Employees from '@/components/pages/Employees';
 import Classes from '@/components/pages/Classes';
 import Grades from '@/components/pages/Grades';
 import Attendance from '@/components/pages/Attendance';
@@ -144,6 +145,7 @@ function App() {
         <Route path="/classes" element={<Layout><Classes /></Layout>} />
         <Route path="/grades" element={<Layout><Grades /></Layout>} />
         <Route path="/attendance" element={<Layout><Attendance /></Layout>} />
+<Route path="/employees" element={<Layout><Employees /></Layout>} />
         <Route path="/" element={<Layout><Dashboard /></Layout>} />
       </Routes>
       <ToastContainer
